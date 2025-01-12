@@ -1,0 +1,10 @@
+{
+  "name": "pratik",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run start --prefix pratik-web\" \"npm run start --prefix portfolio-backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
+}
