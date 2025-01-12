@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+require("dotenv").config(); // Load environment variables from .env
 
 const messageRoutes = require("./routes/messages");
 
@@ -10,7 +11,7 @@ const PORT = process.env.PORT || 4000;
 
 // CORS Configuration
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || "https://portfolio-website-pratikf.vercel.app", // Frontend URL from environment variable or default
+  origin: process.env.FRONTEND_URL, // Use the FRONTEND_URL variable
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
@@ -21,7 +22,7 @@ app.use(bodyParser.json());
 
 // MongoDB Connection
 mongoose
-  .connect(process.env.MONGO_URI || "mongodb+srv://prajapatipm16:3ClpFm4uUsxIKPjM@portfolio.noz1l.mongodb.net/PortfolioDB?retryWrites=true&w=majority&appName=PortFolio", {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
