@@ -20,7 +20,7 @@ const Contact = () => {
 
     try {
       // Sending data to the backend
-      const response = await fetch("https://portfolio-website-pratiks.vercel.app/api/messages/send", {
+      const response = await fetch("http://localhost:4000/api/messages/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
