@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 4000;
 
 // CORS Configuration
 const corsOptions = {
-  origin: "https://portfolio-website-pratiks.vercel.app", // Your Vercel frontend URL
+  origin: "https://portfolio-website-pratikf.vercel.app", // Your Vercel frontend URL
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
